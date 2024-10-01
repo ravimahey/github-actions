@@ -1,0 +1,12 @@
+name: Create S3
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create s3
+        run: echo "s3 created"
