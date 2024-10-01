@@ -1,0 +1,14 @@
+name: DEV ENV
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    environment: DEV
+    steps:
+      - name: get variables
+        run: |
+          - echo {{ secrets.ECR }}
+          - echo {{ env.APP }} 
