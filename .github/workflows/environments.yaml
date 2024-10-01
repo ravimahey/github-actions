@@ -11,4 +11,4 @@ jobs:
       - name: Get Variables
         run: |
           echo "ECR: ${{ secrets.ECR }}"
-          echo "APP: ${{ env.APP }}"
+          echo "APP: ${{ vars.APP }}"
