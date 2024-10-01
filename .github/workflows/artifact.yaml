@@ -1,0 +1,23 @@
+name: Test Artifacts
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build and upload artifact
+        run: |
+          echo "Building project..."
+          # Your build commands here
+          echo "Hello World" > hello.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact-${{ github.ref_name }}
+          path: hello.txt
