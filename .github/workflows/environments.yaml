@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEV
     steps:
-      - name: get variables
+      - name: Get Variables
         run: |
-          - echo {{ secrets.ECR }}
-          - echo {{ env.APP }} 
+          echo "ECR: ${{ secrets.ECR }}"
+          echo "APP: ${{ env.APP }}"
